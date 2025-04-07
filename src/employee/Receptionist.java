@@ -8,14 +8,14 @@ package employee;
  *
  * @author User
  */
-public class Receptionist extends Employee{
-    
-    public Receptionist(String firstName, String surname, String PPSN, String role, int employeeID) {
-        super(firstName, surname, PPSN, role, employeeID);
+public class Receptionist extends Employee {
+
+    public Receptionist(String firstName, String surname, String PPSN, int employeeID) {
+        super(firstName, surname, PPSN, "Receptionist", employeeID);
     }
-    
+
     @Override
-    public String work(){
+    public String work() {
         return this.getFirstName() + " is dealing with custumers.";
     }
 }

@@ -9,7 +9,7 @@ package employee;
  * @author User
  */
 public class Employee {
-    
+
     private String firstName;
     private String surname;
     private String PPSN;
@@ -26,9 +26,8 @@ public class Employee {
         this.employeeID = employeeID;
         this.wallet = 0;
     }
-    
-    
-    public String work(){
+
+    public String work() {
         return this.firstName + "is working now.";
     }
 
@@ -64,9 +63,8 @@ public class Employee {
     public void setWallet(double wallet) {
         this.wallet = wallet;
     }
-    
-    //I cant change it, so I'm just creating Getters
 
+    //I cant change it, so I'm just creating Getters
     public String getPPSN() {
         return PPSN;
     }
@@ -74,6 +72,20 @@ public class Employee {
     public int getEmployeeID() {
         return employeeID;
     }
-    
-    
+
+    /**
+     * Create a formatted version of the Employee details
+     *
+     * @return formatted version as a String
+     */
+    @Override
+    public String toString() {
+
+        String formattedDetails = "\n **** EMPLOYEE ID " + this.getEmployeeID()
+                + "\n\t" + this.firstName + " " + this.surname
+                + "\n\t" + " Position: " + this.getRole();
+
+        return formattedDetails;
+    }
+
 }
